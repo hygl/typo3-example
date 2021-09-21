@@ -14,7 +14,7 @@ pipeline {
       }
       post {
         success {
-          archiveArtifacts artifacts: 'typo3-example-$BUILD_NUMBER.zip', fingerprint: true
+          archiveArtifacts artifacts: 'typo3-example-*.zip', fingerprint: true
         }
       }
     }
