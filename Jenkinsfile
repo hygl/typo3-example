@@ -11,6 +11,9 @@ pipeline {
       steps {
         sh 'php composer.phar install'
         sh 'zip -r typo3-example-$BUILD_NUMBER.zip vendor/'
+        sh 'zip -r typo3-example-$BUILD_NUMBER.zip public/'
+        sh 'zip -r typo3-example-$BUILD_NUMBER.zip var/'
+        sh 'zip -r typo3-example-$BUILD_NUMBER.zip config/'
       }
       post {
         success {
